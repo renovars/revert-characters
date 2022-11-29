@@ -10,10 +10,10 @@ include "RevertCharacters.php";
 
 function revertCharactersTest (){
 
-    $str = array("Привет! Как дела?", "", "Hello - Здравствуйте!");
-    $revert_str = array("Тевирп! Как алед?", "", "Olleh - Етйувтсвардз!");
+    $str = array("Привет! Как дела?", "", "Hello - Здравствуйте!", "!", "Привет ", "¡Hola");
+    $revert_str = array("Тевирп! Как алед?", "", "Olleh - Етйувтсвардз!", "!", "Тевирп ", "¡Aloh");
 
-    for ($i = 0; $i == (count($str) - 1); $i++) {
+    for ($i = 0; $i < count($str); $i++) {
         if ($revert_str[$i] !== revertCharacters($str[$i]))
             return "failed";
     }
@@ -21,6 +21,6 @@ function revertCharactersTest (){
 }
 
 echo revertCharactersTest() . "<br>";
-$str = 'Hello - Здравствуйте!';
+$str = 'Привет ';
 echo "<h1>" . $str . "<br>" . PHP_EOL;
 echo revertCharacters($str);
