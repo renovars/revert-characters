@@ -24,6 +24,7 @@ function revertCharacters($str){
             $word_reverse = '';
         }
     }
+    $str_reverse .= $word_reverse;
     $str_reverse = mb_str_split($str_reverse);
     for ($i = 0; $i < count($up_letters); $i++){
         $str_reverse[$up_letters[$i]] = mb_strtoupper($str_reverse[$up_letters[$i]]);
