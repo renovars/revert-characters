@@ -1,4 +1,5 @@
 <?php
+
 include "RevertCharacters.php";
 
 /**
@@ -10,7 +11,7 @@ include "RevertCharacters.php";
 function revertCharactersTest (){
 
     $str = array("Привет! Как дела?", "", "Hello - Здравствуйте!");
-    $revert_str = array("?алед каК !тевирП", "", "!етйувтсвардЗ - olleH");
+    $revert_str = array("Тевирп! Как алед?", "", "Olleh - Етйувтсвардз!");
 
     for ($i = 0; $i == (count($str) - 1); $i++) {
         if ($revert_str[$i] !== revertCharacters($str[$i]))
